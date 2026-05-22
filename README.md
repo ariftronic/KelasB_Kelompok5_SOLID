@@ -2,24 +2,24 @@
 Untuk belajar PBO 
 ## Analisis Prinsip SOLID pada Python
 
-# Kelompok 5
+## Kelompok 5
 1. Muhammad Nur Arif (
 2. Mahardika Yumna Waratmaja (K3525032)
 3. Danang Rafli Juvianto (K3525054)
 4. Awang Bintang M Lazuardi (
 5. Afrizal Affandi Ahmad (
 
-# Deskripsi
+## Deskripsi
 Project ini dibuat untuk menganalisis penerapan prinsip SOLID pada program Python bertema Kebun Binatang.
 
-# Isi Repository
+## Isi Repository
 - kode_awal.py
 - kode_perbaikan.py
 - analisis_solid.md
 - screenshot output
 - laporan tugas
 
-# Prinsip yang Dianalisis
+## Prinsip yang Dianalisis
 - Single Responsibility Principle
 - Open Closed Principle
 - Liskov Substitution Principle
