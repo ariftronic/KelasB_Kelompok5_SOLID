@@ -13,11 +13,8 @@ Untuk belajar PBO
 Project ini dibuat untuk menganalisis penerapan prinsip SOLID pada program Python bertema Kebun Binatang.
 
 ## Isi Repository
-- kode_awal.py
-- kode_perbaikan.py
-- analisis_solid.md
-- screenshot output
-- laporan tugas
+- 
+
 
 ## Prinsip yang Dianalisis
 - Single Responsibility Principle
