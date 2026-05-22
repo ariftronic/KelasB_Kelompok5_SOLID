@@ -1,8 +1,6 @@
 # Belajar-Github-Kelompok-5-PBO-PTIK25
 Untuk belajar PBO 
-# Belajar-Github-Kelompok-5-PBO-PTIK25
-Untuk belajar PBO 
-# Analisis Prinsip SOLID pada Python
+## Analisis Prinsip SOLID pada Python
 
 # Kelompok 5
 1. Muhammad Nur Arif (
