@@ -3,7 +3,7 @@ Untuk belajar PBO
 ## Analisis Prinsip SOLID pada Python
 
 ## Kelompok 5
-1. Muhammad Nur Arif (
+1. Muhammad Nur Arif (K3525034)
 2. Mahardika Yumna Waratmaja (K3525032)
 3. Danang Rafli Juvianto (K3525054)
 4. Awang Bintang M Lazuardi (
