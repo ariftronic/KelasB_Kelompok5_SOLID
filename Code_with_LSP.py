@@ -1,20 +1,33 @@
-class Hewan:
+#Liskov Substitution Principle
+#Mahardika Yumna W. (K3525032)
+
+from abc import ABC, abstractmethod
+
+class Hewan(ABC):
   def __init__(self, nama, jenis):
     self.nama = nama
     self.jenis = jenis
 
+  @abstractmethod
   def makan(self):
-    print(f"Hewan {self.nama} sedang makan.")
+    pass
 
 class HewanTerbang(Hewan):
-  def terbang(self):
-    print(f"Hewan {self.nama} bisa terbang.")
 
-class Burung(HewanTerbang):
-  pass
+  @abstractmethod
+  def terbang(self):
+    pass
 
 class Sapi(Hewan):
-  pass 
+  def makan(self):
+    print(f"{self.nama} sedang makan rumput")
+
+class Burung(HewanTerbang):
+  def makan(self):
+    print(f"{self.nama} sedang makan padi")
+
+  def terbang(self):
+    print(f"{self.nama} sedang terbang")
 
 class Kandang:
   def __init__(self):
@@ -23,9 +36,6 @@ class Kandang:
   def tambah_hewan(self, hewan):
     self.hewan_list.append(hewan)
 
-  def bersihkan_kandang(self):
-    print("Kandang dibersihkan")
-
 class KebunBinatang:
   def __init__(self):
     self.kandang = Kandang()
@@ -33,16 +43,16 @@ class KebunBinatang:
   def rawat_semua_hewan(self):
     for hewan in self.kandang.hewan_list:
       hewan.makan()
-      
-      if isinstance(hewan, HewanTerbang):
-            hewan.terbang()
 
-burung = Burung("Perkutut", "Burung")
-sapi = Sapi("sapi", "mamalia")
+      if isinstance(hewan, HewanTerbang):
+        hewan.terbang()
+
+sapi = Sapi("Sepi", "Mamalia")
+burung = Burung("Rakatoa", "Terbang")
 
 zoo = KebunBinatang()
 
-zoo.kandang.tambah_hewan(burung)
 zoo.kandang.tambah_hewan(sapi)
+zoo.kandang.tambah_hewan(burung)
 
 zoo.rawat_semua_hewan()
