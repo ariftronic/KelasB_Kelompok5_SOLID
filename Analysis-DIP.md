@@ -31,7 +31,7 @@ Solusi DIP
 Solusi yang dapat dilakukan adalah membuat sebuah abstraksi atau interface (misalnya class PaymentMethod) sebagai kerangka standar untuk semua metode pembayaran. Kemudian, kita mengubah class PaymentProcessor agar menerima abstraksi tersebut melalui parameternya (menggunakan teknik Dependency Injection), bukan lagi menciptakan objek pembayarannya sendiri di dalam method.
 
 Contoh perbaikannya:
-```
+```python
 from abc import ABC, abstractmethod
 
 # 1. Membuat Abstraksi
