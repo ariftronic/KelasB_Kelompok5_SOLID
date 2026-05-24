@@ -1,9 +1,9 @@
 ## Dependency Inversion Principle (DIP)
-Berdasarkan konsep SOLID dari Robert C. Martin dan merujuk pada penjelasan di blog Rosihan Ari, prinsip Dependency Inversion Principle (DIP) memiliki dua aturan utama:
+Prinsip Dependency Inversion Principle (DIP) memiliki dua aturan utama:
 
-Modul tingkat tinggi (high-level modules) tidak boleh bergantung pada modul tingkat rendah (low-level modules). Keduanya harus bergantung pada abstraksi.
+1. Modul tingkat tinggi (high-level modules) tidak boleh bergantung pada modul tingkat rendah (low-level modules). Keduanya harus bergantung pada abstraksi.
 
-Abstraksi tidak boleh bergantung pada detail. Sebaliknya, detail implementasi yang harus bergantung pada abstraksi.
+2. Abstraksi tidak boleh bergantung pada detail. Sebaliknya, detail implementasi yang harus bergantung pada abstraksi.
 
 Singkatnya, antarkomponen di dalam kode sebaiknya berinteraksi melalui sebuah "kerangka" (seperti Interface atau Abstract Class), bukan memanggil dan membuat objek spesifik secara langsung (hardcoded). Pembalikan (inversion) ini bertujuan memutus ikatan yang kaku (tight coupling).
 
@@ -27,9 +27,9 @@ Merujuk pada konsep yang dijelaskan oleh Rosihan Ari, sistem ini sangat kaku. Ba
 ## Solusi dan Refactoring Kode
 Untuk menyelesaikan masalah tight coupling ini, kita perlu membalik ketergantungannya (Dependency Inversion). Solusi yang diimplementasikan:
 
-Membuat sebuah abstraksi (Interface) sebagai standar kontrak untuk semua tempat penampungan hewan.
+1. Membuat sebuah abstraksi (Interface) sebagai standar kontrak untuk semua tempat penampungan hewan.
 
-Memastikan class Kandang (atau class fasilitas lainnya nanti) mengimplementasikan abstraksi tersebut.
+2. Memastikan class Kandang (atau class fasilitas lainnya nanti) mengimplementasikan abstraksi tersebut.
 
 Mengubah class KebunBinatang agar menerima abstraksi dari luar (menggunakan teknik Dependency Injection pada parameternya), sehingga tidak perlu lagi menciptakan objek Kandang secara manual.
 
