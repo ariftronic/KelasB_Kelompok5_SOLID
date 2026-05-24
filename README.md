@@ -6,7 +6,7 @@ Untuk belajar PBO
 1. Muhammad Nur Arif (K3525034)
 2. Mahardika Yumna Waratmaja (K3525032)
 3. Danang Rafli Juvianto (K3525054)
-4. Awang Bintang M Lazuardi (
+4. Awang Bintang M Lazuardi (K3525052)
 5. Afrizal Affandi Ahmad (
 
 ## Deskripsi
