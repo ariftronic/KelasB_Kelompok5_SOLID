@@ -1,13 +1,20 @@
-# Dependency Inversion Principle (DIP)
+## Dependency Inversion Principle (DIP)
+Dependency Inversion Principle (DIP) pada dasarnya memiliki dua aturan utama yang wajib dipegang:
 
-Dependency Inversion Principle adalah salah satu prinsip dalam SOLID yang menyatakan bahwa *class* tingkat tinggi (*high-level modules*) tidak boleh bergantung secara langsung pada *class* tingkat rendah (*low-level modules*). Keduanya seharusnya bergantung pada sebuah abstraksi (*interface* atau *abstract class*). Prinsip ini bertujuan agar komponen-komponen di dalam sistem tidak saling terikat kuat (*tightly coupled*), sehingga desain program menjadi lebih rapi, fleksibel, dan mudah dikembangkan.
+1. High-level modules should not depend on low-level modules. Both should depend on abstractions. (Modul tingkat tinggi tidak boleh bergantung pada modul tingkat rendah. Keduanya harus sama-sama bergantung pada abstraksi).
 
-Secara sederhana, DIP mengajarkan bahwa kode kita sebaiknya berinteraksi dengan "kerangka" atau standar umum, bukan langsung memanggil objek yang spesifik. Jika sebuah *class* utama langsung membuat dan menggunakan objek dari *class* lain di dalamnya (*hardcoded*), maka hal tersebut termasuk pelanggaran DIP. Dengan menerapkan DIP (misalnya melalui teknik *Dependency Injection*), program akan lebih mudah dipelihara dan komponennya bisa dibongkar-pasang tanpa merusak sistem inti.
+2. Abstractions should not depend on details. Details should depend on abstractions. (Abstraksi tidak boleh bergantung pada detail implementasi. Justru detail itulah yang harus bergantung pada abstraksi).
 
-## Ciri-Ciri Pelanggaran DIP
+Dalam struktur kode, class tingkat tinggi (yang biasanya berisi core logic atau aturan bisnis utama) tidak boleh berinteraksi langsung dengan class tingkat rendah (yang mengurus hal teknis/detail). Keduanya harus dijembatani oleh sebuah "kerangka" standar, seperti Interface atau Abstract Class.
 
-Pelanggaran Dependency Inversion Principle biasanya terjadi ketika sebuah *class* utama (*high-level*) menginisialisasi atau memanggil detail *class* bawahan (*low-level*) secara langsung di dalam kodenya. Hal ini menyebabkan kedua *class* tersebut menjadi sangat bergantung satu sama lain. Akibatnya, desain program menjadi kaku; ketika kita ingin menambahkan fitur baru atau mengubah cara kerja *class* bawahan, kita terpaksa harus ikut membongkar dan memodifikasi kode pada *class* utama yang sebenarnya sudah berjalan dengan baik.
+Pembalikan (inversion) arah ketergantungan ini dilakukan supaya sistem tidak saling mengikat terlalu kuat (tight coupling).
 
-## Tujuan DIP
+## Ciri-Ciri Kode yang Melanggar DIP
+Kapan kode kita disebut melanggar DIP? Paling gampang dilihat kalau ada sebuah class utama (high-level) yang langsung melakukan inisialisasi atau pembuatan objek dari class lain (low-level) di dalam konstruktor atau method-nya (biasanya hardcoded).
 
-Tujuan dari Dependency Inversion Principle adalah untuk memisahkan ketergantungan langsung antar komponen di dalam program. Dengan menggunakan abstraksi sebagai jembatan, program menjadi lebih modular, lebih mudah dites, dan lebih fleksibel ketika ingin dikembangkan. DIP memastikan bahwa perubahan pada detail teknis di modul tingkat rendah tidak akan mengganggu atau merusak logika alur kerja di modul tingkat tinggi.
+Praktik seperti ini bikin dua class tersebut jadi sangat bergantung satu sama lain. Efek buruknya, desain program jadi kaku. Pas kita butuh nambah fitur baru atau sekadar ngubah cara kerja class bawahan, kita terpaksa harus bongkar-bongkar lagi kode di class utama yang sebenarnya sudah jalan normal.
+
+## Tujuan Utama DIP
+Inti dari penerapan DIP adalah memutus rantai ketergantungan langsung antar komponen tersebut biar jadi loosely coupled (terikat lemah).
+
+Dengan menjadikan abstraksi sebagai jembatan (biasanya dibantu dengan teknik Dependency Injection), kode kita bakal jadi lebih modular, gampang dites (testable), dan fleksibel. Kita bebas membongkar-pasang atau menambah detail teknis di modul tingkat rendah tanpa takut merusak atau mengganggu alur kerja di modul tingkat tinggi.
