@@ -7,7 +7,7 @@ Untuk belajar PBO
 2. Mahardika Yumna Waratmaja (K3525032)
 3. Danang Rafli Juvianto (K3525054)
 4. Awang Bintang M Lazuardi (K3525052)
-5. Afrizal Affandi Ahmad (
+5. Afrizal Affandi Ahmad (K3525054)
 
 ## Deskripsi
 Project ini dibuat untuk menganalisis penerapan prinsip SOLID pada program Python bertema Kebun Binatang.
